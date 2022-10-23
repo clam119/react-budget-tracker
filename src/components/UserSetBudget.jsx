@@ -7,11 +7,8 @@ const UserSetBudget = ({ budget, setBudget }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const userSetBudget = parseInt(e.target[0].value);
-        setUserInput(() => userSetBudget)
-        setBudget((currentBudget) => {  
-            const newBudget = currentBudget + userInput
-            return newBudget;
-        })
+        setUserInput(userSetBudget)
+        setBudget(userSetBudget)
     }
     return(
         <form onSubmit={( handleSubmit )}>
